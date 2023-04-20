@@ -1,0 +1,2 @@
+ATLAS_URI = 'mongodb+srv://tushar:tushar@tushar.y0ky74s.mongodb.net/testprocess.env.ATLAS_URI'
+// process.env.ATLAS_URI
