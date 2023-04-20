@@ -40,6 +40,7 @@ function AddCar() {
           "year": year,
           "description": description,
           "url": "img/Cars/inprogress.jpeg" 
+          
       })
     };
     fetch('https://api-car-aution.onrender.com/addcar', requestOptions)
@@ -133,6 +134,7 @@ function AddCar() {
           <br />
           <button type="submit" onClick={addcar}>Add Car</button>
         </form>
+        {isSubmitted ? <div>The car is sucessfully added. Click on HOME to view the list of Cars</div> : addcar}
       </div>
     </div>
   );
