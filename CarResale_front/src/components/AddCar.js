@@ -42,7 +42,7 @@ function AddCar() {
           "url": "img/Cars/inprogress.jpeg" 
       })
     };
-    fetch('http://localhost:7000/addcar', requestOptions)
+    fetch('https://api-car-aution.onrender.com/addcar', requestOptions)
       .then(response => response.json())
   }
 }

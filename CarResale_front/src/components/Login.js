@@ -45,7 +45,7 @@ function Login() {
           "password": inputpassword 
       })
     };
-    fetch('http://localhost:7000/login', requestOptions)
+    fetch('https://api-car-aution.onrender.com/login', requestOptions)
         .then(response => response.json())
         setIsSubmitted(true);
     }

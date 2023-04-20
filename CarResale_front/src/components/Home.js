@@ -12,7 +12,7 @@ class Home extends Component {
   static arraylist = []
   
   componentDidMount() {
-    fetch("http://localhost:7000/getcars")
+    fetch("https://api-car-aution.onrender.com/getcars")
       .then(response => response.json())
       .then(data => {
         this.setState({ cars: data })
