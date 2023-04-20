@@ -1,0 +1,700 @@
+/* ================================= 
+  WEB FONTS 3a9ab8
+==================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+/* ================================= 
+  ELEMENT STYLES
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  /* color: #ffffff; */
+  /* background-image: linear-gradient(90deg, rgb(113, 223, 223),rgb(33, 57, 57));  margin: 0; */
+  font-family: 'Roboto', sans-serif;
+  background: rgb(105, 103, 103);
+}
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: rgb(24, 22, 22);
+  font-size: 1.6em;
+  margin-bottom: 1.25em;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #bccad8;
+}
+hr {
+  border: 0;
+  height: 0;
+  margin: 2.3em 0 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* ================================= 
+  LAYOUT & PAGE STYLES
+==================================== */
+
+.container {
+  width: 100%;
+  /* padding-bottom: 2em; */
+  /* margin: 0 auto 2em; */
+  /* background: rgb(97, 99, 99); */
+  
+  /* box-shadow: 4px 4px #7099dc; */
+  overflow: hidden;
+}
+header {
+  background: rgb(131, 136, 136);
+  box-shadow: 2px 7px 10px 0px #313131;
+  box-shadow: 2px;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: .5em;
+}
+.main-content {
+  padding: 2em 2em;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: rgb(131, 136, 136);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: .5em;
+  /* box-shadow: 4px 4px #888888; */
+}
+.main-cart{
+  float: left;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.not-found {
+  text-align: center;
+}
+
+/* MAIN NAV -------- */n
+
+.main-nav a {
+  font-size: .95em;
+  color: #222;
+  /* text-align: center; */
+  text-transform: uppercase;
+  display: block;
+  padding: 1em;
+  transition: .2s;
+  border-radius: .5em;
+}
+.main-nav a:hover,
+.main-nav .active {
+  color: #fff;
+  background: rgb(142, 141, 141);
+}
+
+/* COURSE NAV -------- */
+.linkmain-nav a:hover,
+.linkmain-nav .active {
+  background: rgb(131, 136, 136);
+}
+
+.course-nav li {
+  display: inline-block;
+}
+.course-nav li + li {
+  margin-left: .6em;
+}
+.course-nav a {
+  font-size: .85em;
+  color: #7d7d7d;
+  padding: .2em .8em;
+  border-radius: .25em;
+  background: #eaebeb;
+  transition: .2s;
+}
+.course-nav a:hover,
+.course-nav a.active {
+  color: #fff;
+  background: rgb(142, 141, 141);
+}
+
+/* ICONS -------- */
+
+.icn-logo {
+  background: #54606b;
+  color: #fff;
+}
+.icn-logo i {
+  font-size: 2.45em;
+  line-height: 0;
+  margin-top: 30px;
+}
+.icn-error {
+  font-size: 3.2em;
+  margin-bottom: .25em;
+}
+
+/* ================================= 
+  MEDIA QUERIES
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) { 
+  body {
+    padding-top: .8em;
+  }
+  .home a {
+    border-color: transparent;
+  }
+   .icn-logo {
+     display: block;
+     width: 100%;
+     text-align: center;
+     padding-bottom: 4px;
+   }
+   .main-nav a {
+     border-top: 2px solid transparent;
+     border-bottom: 2px solid transparent;
+   }
+   .main-nav a:hover {
+     border-color: rgba(0,0,0, .1);
+   }
+   .courses h2 {
+     margin-bottom: 0;
+   }
+   .course-nav {
+     display: block;
+     margin: 1.5em 0 3.2em;
+   }
+   .home a,
+   input,
+   button {
+     display: block;
+     width: 100%;
+     margin-bottom: 1em;
+   }
+}
+@media (min-width: 769px) {
+  body {
+    background: rgb(105, 103, 103);
+
+    /* padding-top: 3em; */
+  }
+  .home a {
+    border-color: #dde7f2;
+  }
+  .media img,
+  .media > div,
+  .cart {
+    float: left;
+    display: inline;
+  }
+  .media > div {
+    width: 85.1%;
+    margin-left: 1.5em;
+  } 
+  .cart {
+    width: 48.73%;
+    margin-bottom: 1.5em;
+    background: white;
+  }
+ 
+  .cart + .cart {
+    margin-left: 2.54%;
+  }
+  .cart:nth-child(2n+3) {
+    clear: left;
+    margin-left: 0;
+  }
+  /* MAIN NAV -------- */
+  .icn-logo {
+    margin-right: auto;
+    padding: 0 2em;
+  }
+  header,
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    padding: 1.25em 1.5em;
+    color: #1d1e23;
+
+  }
+  .main-nav a:hover {
+    border-color: rgba(0,0,0, .1);
+  }
+  /* COURSE NAV -------- */
+  .course-nav {
+    float: right;
+  } 
+  .courses h2 {
+    float: left;
+  }
+}
+
+
+/* New */
+
+/* body {
+  background: #edeff0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
+
+.Carcontainer {
+  width: 90%;
+  max-width: 1100px;
+  margin: 1.1em auto;
+  /* box-shadow: 4px 4px #888888; */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+  box-sizing: border-box;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.card div {
+  text-align: center;
+  padding: 1em;
+  background-color: #000;
+  margin-bottom: 1.5em;
+}
+
+/* h2 {
+  font-size: 2em;
+  margin-bottom: 8px;
+  color: #384047;
+  line-height: 1.2;
+  margin-top: 5px;
+} */
+
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0 0 0 1em;
+  margin-top: 0.85em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+p {
+  color: #222;
+  font-size: 1em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+img {
+  width: 350px;
+  height: 250px;
+}
+img:hover {
+  animation: shake 2s;
+
+
+}
+.cart-img{
+  width: 200px;
+  height: 100px;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+h5 {
+  color: red;
+  position: bottom;
+}
+.footer{
+  align-items: center;
+}
+
+.car-img{
+  width: 330px;
+  height: 330px;
+}
+.aboutImage {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.aboutImage:hover {
+  animation: shake 2s;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.Signup {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #4c5fa7;
+  margin-top: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  background-color: #bcbbbb;
+  border-radius: 5px;
+  /* box-shadow: 0 9px #999; */
+  box-shadow: 0px 7px 10px 1px #ffffff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #3a9ab8;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 44%;
+}
+
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 25%;
+  margin-right: 25%;
+  /* background: rgb(131, 136, 136); */
+  /* margin-top: 40px; */
+  margin-bottom: 40px;
+}
+
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+.buttonAddCart {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #bcbbbb;
+  border-radius: 5px;
+  /* box-shadow: 0 9px #999; */
+  box-shadow: 0px 7px 10px 1px #ffffff;
+}
+
+.buttonAddCart:hover {background-color: #3a9ab8}
+
+.buttonAddCart:active {
+  background-color: #3c42f6;
+  transform: translateY(4px);
+}
+.Description{
+  height:200px;
+}
+.logo {
+  /* display: inline-block; */
+  vertical-align: middle;
+  width: 90px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  align-items: flex-end;
+  /* margin-top: 15px;    if you want it vertically middle of the navbar. */
+}
+#search-form{
+  width: 200px;
+  margin-left: 20px;
+}
+
+
+/* sign up css */
+
+
+.text-center {
+  margin: auto;
+  max-width: 430px;
+  padding: 25px;
+}
+
+.form-wrapper label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+  color: #666;
+}
+
+.form-wrapper input {
+  border: none;
+  background: #f6f6f6;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-wrapper input:focus {
+  outline: none;
+}
+
+.checkbox label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: #e0e0e0;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+/*ADDCAR*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  /* margin-left: 30px; */
+}
+.cart{
+  float: left;
+}
+
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.pagination li.active {
+  background-color: #0074d9;
+  color: #fff;
+}
+
+.pagination li.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination li:hover:not(.active):not(.disabled) {
+  background-color: #f5f5f5;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr {
+  border: 1px solid #ddd;
+}
