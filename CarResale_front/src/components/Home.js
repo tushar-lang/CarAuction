@@ -37,13 +37,14 @@ class Home extends Component {
   
 
   searchByName = (searchTerm) => {
-    fetch(`http://localhost:7000/getcars/${searchTerm}`)
+    fetch(`https://api-car-aution.onrender.com/getcars/${searchTerm}`)
       .then(response => response.json())
       .then(data => {
         this.setState({ cars: data });
       })
       .catch(error => console.log(error));
   }
+
   render() {
     return (
       <div className="main-content home">
