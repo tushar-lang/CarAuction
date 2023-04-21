@@ -7,20 +7,15 @@ const Signup = () => {
     const signupClick = (event) => {
       event.preventDefault();
 
-      const firstName = event.target.elements.firstName.value || "";
-      const lastName = event.target.elements.lastName.value || "";
+      const username = event.target.elements.username.value || "";
       const email = event.target.elements.email.value || "";
       const password = event.target.elements.password.value || "";
-      const confirmPassword = event.target.elements.confirmPassword.value || "";
-     const statusMessage = document.querySelector("#statusMessage")
+      const statusMessage = document.querySelector("#statusMessage")
 
       statusMessage.style.color = 'red';
 
-      if (firstName === "") {
+      if (username === "") {
         setMessage('Please enter first name');
-        return
-      } else if (lastName === "") {
-        setMessage('Please enter last name');
         return
       } else if (email === "") {
         setMessage('Please enter email');
@@ -28,20 +23,30 @@ const Signup = () => {
       } else if (password === "") {
         setMessage('Please enter password');
         return
-      } else if (password !== confirmPassword) {
-        setMessage('Password and confirm password do not match');
-        return
       } else {
         statusMessage.style.color = 'green';
-        setMessage('Validation Successful');
+        setMessage('Submitted');
       }
+      if(username && email && password){
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            "username":username,
+            "email": email,
+            "password": password 
+        })
+      };
+      fetch('http://localhost:7000/signup', requestOptions)
+          .then(response => response.json())
+          setIsSubmitted(true);
+      }
+      
 
       const studentSignupRequest = {
-        firstName,
-        lastName,
+        username,
         email,
         password,
-        confirmPassword,
       };
 
       authservice.signup(studentSignupRequest)
@@ -68,18 +73,12 @@ const Signup = () => {
           <div className="form-group">
 
             <div className="form-floating">
-              <label htmlFor="floatingInput">First Name</label>
+              <label htmlFor="floatingInput">Username</label><br></br>
               <input
-                type="text" className="form-control" id="floatingInput" name="firstName"/>
-              
-            </div><br>
-            </br>
-
-            <div className="form-floating">
-              <label htmlFor="floatingInput">Last Name</label>
-              <input type="text" className="form-control" id="floatingInput" name="lastName"/>
+                type="text" className="form-control" id="floatingInput" name="username"/>
               
             </div>
+      
 
           </div>
           <div className="form-floating">
@@ -93,11 +92,7 @@ const Signup = () => {
             <input type="password" className="form-control" id="floatingPassword" name="password" />
             
           </div>
-          <div className="form-floating">
-            <label htmlFor="floatingPassword">Confirm Password</label><br></br>
-            <input type="password" className="form-control" id="floatingPassword" name="confirmPassword" />
-            
-          </div>
+        
           <br />
           
 
